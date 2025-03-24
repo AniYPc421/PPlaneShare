@@ -1,0 +1,55 @@
+div.notifier-container {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  pointer-events: none;
+  margin: 0px;
+  padding: 1em;
+  z-index: 20;
+}
+
+div.notifier-container > ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+div.notifier-container > ul > li {
+  list-style: none;
+  margin-top: 0.5em;
+}
+
+div.notifier-notification {
+  position: relative;
+  border-radius: 0.5em;
+  width: 16em;
+  box-shadow: 1px 1px 4px gray;
+  font-size: 0.8em;
+  padding: 1em 1.5em;
+  background-color: white;
+  pointer-events: all;
+  transition: 0.3s box-shadow;
+}
+
+div.notifier-notification:hover {
+  box-shadow: 1px 1px 6px gray;
+}
+
+@media screen and (max-width: 280px) {
+  div.notifier-notification {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+div.notifier-notification > button {
+  float: right;
+  appearance: none;
+  border-radius: 0.4em;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid gainsboro;
+  transition: 0.3s box-shadow;
+}
+
+div.notifier-notification > button:hover {
+  box-shadow: 1px 1px 1px gray;
+}

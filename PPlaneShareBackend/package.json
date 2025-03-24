@@ -1,0 +1,25 @@
+{
+  "name": "pplanesharebackend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "DEBUG=PPlaneShare:* node index.js",
+    "dev": "DEBUG=PPlaneShare:* nodemon index.js"
+  },
+  "author": "aniypc421",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "eslint": "^9.22.0",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "debug": "^4.4.0",
+    "express": "^4.21.2",
+    "ws": "^8.18.1"
+  }
+}

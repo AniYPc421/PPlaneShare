@@ -1,0 +1,119 @@
+div.settings-container {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 100, 100, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+}
+
+section.settings {
+  box-sizing: border-box;
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  width: 560px;
+  box-shadow: 2px 2px 4px black;
+  background-color: white;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  section.settings {
+    width: 80%;
+  }
+}
+
+@media screen and ((max-width: 250px) or (max-height: 250px)) {
+  section.settings {
+    position: fixed;
+    border-radius: 0px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-height: 380px) {
+  section.settings {
+    display: block;
+  }
+}
+
+div.settings-overflow {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  gap: 0.5em;
+  width: 100%;
+}
+
+div.settings-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (max-width: 460px) {
+  div.settings-field {
+    flex-direction: column;
+  }
+}
+
+div.settings-field label {
+  font-size: 0.9em;
+  margin: 0px;
+}
+
+div.settings-field input {
+  appearance: none;
+  width: 10em;
+  border-radius: 0.3em;
+  padding: 0.2em 0.5em;
+  border: 1px solid gray;
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 260px) {
+  div.settings-field input {
+    width: 100%;
+  }
+}
+
+div.settings-button-set {
+  margin-top: 0.4em;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 0.5em;
+}
+
+@media screen and (max-width: 210px) {
+  div.settings-button-set {
+    align-items: end;
+    flex-direction: column;
+  }
+}
+
+div.settings-button-set > button {
+  appearance: none;
+  border-radius: 0.4em;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid gray;
+  padding: 0.5em 1em;
+  transition: 0.3s box-shadow;
+  font-size: 0.8em;
+}
+
+div.settings-button-set > button:hover {
+  box-shadow: 1px 1px 3px gray;
+}

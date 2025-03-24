@@ -1,0 +1,185 @@
+section.receive-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+section.receive-selector {
+  border-radius: 0em 0.5em 0.5em 0.5em;
+  box-shadow: 1px 1px 4px gray;
+  position: relative;
+}
+
+div.receive-selector-padding {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+}
+
+div.receive-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+div.code-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+div.code-input > input {
+  appearance: none;
+  width: 1em;
+  text-align: center;
+  border: 0px;
+  border-bottom: 0.1em solid transparent;
+  font-size: 1.5em;
+}
+
+div.code-input > div {
+  position: relative;
+  top: -0.2em;
+  border-radius: 0.1em;
+  border: 0.1em solid gainsboro;
+  transition: 0.3s border-color;
+}
+
+div.code-input > div.input-filled {
+  border-color: gray;
+}
+
+section.receive-list {
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  box-shadow: 1px 1px 4px gray;
+}
+
+section.receive-list > h2 {
+  margin: 0px 0px 0.5em 0px;
+  font-size: 1em;
+}
+
+section.receive-list > p {
+  margin: 0px;
+  font-size: 0.9em;
+}
+
+section.receive-list > ul {
+  padding: 0px;
+}
+
+section.receive-list > ul > li {
+  list-style: none;
+  margin-top: 0.5em;
+}
+
+section.receive-list > ul > li:first-child {
+  margin-top: 0px;
+}
+
+div.receive-list-item {
+  border-radius: 0.3em;
+  box-shadow: 1px 1px 4px gray;
+  padding: 1em 1.5em;
+  transition: 0.3s box-shadow;
+  padding-bottom: 1.3em;
+}
+
+div.receive-list-item:hover {
+  box-shadow: 1px 1px 6px gray;
+}
+
+div.receive-list-item > p {
+  margin: 0px;
+  font-size: 0.85em;
+}
+
+div.receive-list-item > ul {
+  padding: 0px;
+}
+
+div.receive-list-item > ul > li {
+  list-style: none;
+  margin-top: 0.2em;
+}
+
+div.receive-list-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8em;
+}
+
+@media screen and (max-width: 430px) {
+  div.receive-list-item-header {
+    flex-direction: column;
+    gap: 0.2em;
+  }
+}
+
+div.receive-list-item-header > h3 {
+  font-size: 0.9em;
+  margin: 0px;
+  flex-grow: 1;
+}
+
+div.receive-list-item-header > p {
+  font-size: 0.85em;
+  margin: 0px 1em;
+}
+
+div.receive-list-item-header > button {
+  appearance: none;
+  border-radius: 0.4em;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid gainsboro;
+  transition: 0.3s box-shadow;
+  font-size: 0.8em;
+}
+
+div.receive-list-item-header > button:hover {
+  box-shadow: 1px 1px 1px gray;
+}
+
+div.receive-file-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+}
+
+div.receive-file-des {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+@media screen and (max-width: 420px) {
+  div.receive-file-des {
+    align-items: normal;
+    flex-direction: column;
+    gap: 0.1em;
+  }
+}
+
+div.receive-file-des > p {
+  font-size: 0.8em;
+  margin: 0px;
+  display: inline-block;
+}
+
+div.receive-file-des > :first-child {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.receive-file-des > :last-child {
+  flex-shrink: 0;
+  text-align: end;
+}

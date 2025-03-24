@@ -1,0 +1,217 @@
+section.share-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+section.share-selector {
+  border-radius: 0px 0.5em 0.5em 0.5em;
+  margin: 0px;
+  box-shadow: 1px 1px 4px gray;
+  height: 10em;
+  position: relative;
+}
+
+@media screen and (max-width: 220px) {
+  section.share-selector p {
+    display: none;
+  }
+}
+
+div.share-selector-padding {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+}
+
+div.share-selector-drag-section {
+  border-radius: 1em;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 0.2em dashed rgb(150, 150, 150);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  position: relative;
+}
+
+@media screen and (max-width: 370px) {
+  div.share-selector-drag-section {
+    flex-direction: column;
+  }
+}
+
+div.drag-prompt {
+  position: absolute;
+  border-radius: 0.5em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  background-color: rgba(230, 230, 230);
+  color: black;
+  transition: opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.drag-prompt.drag-over {
+  opacity: 1;
+}
+
+section.share-selector p {
+  margin: 0px;
+  font-size: 0.95em;
+}
+
+section.share-selector label {
+  font-size: 0.95em;
+}
+
+section.share-selector input[type="file"] {
+  display: none;
+}
+
+label[for="file-selector"] {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(66, 135, 245);
+  transition: 0.3s color;
+}
+
+label[for="file-selector"]:hover,
+label[for="file-selector"]:focus-visible {
+  color: rgb(70, 95, 219);
+}
+
+section.share-list {
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  box-shadow: 1px 1px 4px gray;
+}
+
+section.share-list > h2 {
+  margin: 0px 0px 0.5em 0px;
+  font-size: 1em;
+}
+
+section.share-list > p {
+  margin: 0px;
+  font-size: 0.9em;
+}
+
+section.share-list > ul {
+  padding: 0px;
+}
+
+section.share-list > ul > li {
+  list-style: none;
+  margin-top: 0.5em;
+}
+
+section.share-list > ul > li:first-child {
+  margin-top: 0px;
+}
+
+div.share-list-item {
+  border-radius: 0.3em;
+  box-shadow: 1px 1px 4px gray;
+  padding: 1em 1.5em;
+  transition: 0.3s box-shadow;
+}
+
+div.share-list-item:hover {
+  box-shadow: 1px 1px 6px gray;
+}
+
+div.share-list-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.share-list-item-header > h3 {
+  flex-grow: 1;
+  font-size: 0.9em;
+  margin: 0px;
+}
+
+div.share-list-item-header > p {
+  font-size: 0.85em;
+  margin: 0px 1em;
+}
+
+div.share-list-item-header > button {
+  appearance: none;
+  border-radius: 0.4em;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid gainsboro;
+  transition: 0.3s box-shadow;
+  font-size: 0.8em;
+}
+
+div.share-list-item-header > button:hover {
+  box-shadow: 1px 1px 1px gray;
+}
+
+@media screen and (max-width: 430px) {
+  div.share-list-item-header {
+    flex-direction: column;
+    gap: 0.2em;
+    margin-bottom: 1em;
+  }
+
+  div.share-list-item-header > p {
+    margin: 0em;
+  }
+}
+
+div.share-list-item > p {
+  font-size: 0.85em;
+  margin: 0px;
+}
+
+div.share-list-item > ul {
+  padding: 0px;
+}
+
+div.share-list-item > ul > li {
+  list-style: none;
+  margin-top: 0.2em;
+}
+
+div.share-file-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+div.share-file-detail > p {
+  font-size: 0.8em;
+  margin: 0px;
+}
+
+@media screen and (max-width: 350px) {
+  div.share-file-detail {
+    align-items: normal;
+    flex-direction: column;
+    gap: 0.1em;
+  }
+}
+
+div.share-file-detail > :first-child {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.share-file-detail > :last-child {
+  flex-shrink: 0;
+  text-align: end;
+}
